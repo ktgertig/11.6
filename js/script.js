@@ -33,10 +33,10 @@ $(function() {
             });
 
             // CONSTRUCTION COLUMN ELEMENT
-            $column.append($columnTitle);
-            $column.append($columnDelete);
-            $column.append($columnAddCard);
-            $column.append($columnCardList);
+            $column.append($columnTitle)
+                .append($columnDelete)
+                .append($columnAddCard)
+                .append($columnCardList);
 
             // RETURN OF CREATED COLUMN
             return $column;
@@ -53,15 +53,16 @@ $(function() {
     };
 
     function Card(description) {
-    var self = this;
+        var self = this;
 
-    this.id = randomString();
-    this.description = description;
-    this.$element = createCard();
+        this.id = randomString();
+        this.description = description;
+        this.$element = createCard();
 
-        function createCard() {
+            function createCard() {
+
             // CREATING THE BLOCKS
-             var $card = $('<li>').addClass('card');
+            var $card = $('<li>').addClass('card');
             var $cardDescription = $('<p>').addClass('card-description').text(self.description);
             var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 
@@ -71,9 +72,8 @@ $(function() {
             });
 
             // COMBINING BLOCKS AND RETURNING THE CARD
-            $card.append($cardDelete);
-            $card.append($cardDescription);
-
+            $card.append($cardDelete)
+                .append($cardDescription);
             return $card;
         }
     }
@@ -99,6 +99,13 @@ $(function() {
             placeholder: 'card-placeholder'
         }).disableSelection();
     }
+
+    $('.create-column')
+        .click(function(){
+            var name = prompt('Enter a column name');
+            var column = new Column(name);
+                board.addColumn(column);
+    });
 
         // CREATING COLUMNS
     var todoColumn = new Column('To do');

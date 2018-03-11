@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+body {
+  font: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  background: linear-gradient(to left, blue, green);
+}
+/*# sourceMappingURL=style.css.map */

@@ -18,9 +18,9 @@ $(function() {
 
         function createColumn() {
             // CREATING COMPONENTS OF COLUMNS
-            var $column = $('<div>').addClass('column');
-            var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-            var $columnCardList = $('<ul>').addClass('column-card-list');
+            var $column = $('<div>').addClass('column').css('float','left').css('padding', '40px').css('border', '2px solid black').css('margin-left', '1%');
+            var $columnTitle = $('<h2>').addClass('column-title').text(self.name).css('text-align','center');
+            var $columnCardList = $('<ul>').addClass('column-card-list').css('min-height', '30px');
             var $columnDelete = $('<button>').addClass('btn-delete').text('x');
             var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
 

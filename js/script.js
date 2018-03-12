@@ -1,10 +1,10 @@
 $(function() {
 
-   	function randomString() {
+    function randomString() {
     	var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
     	var str = '';
     	for (var i = 0; i < 10; i++) {
-        str += chars[Math.floor(Math.random() * chars.length)];
+            str += chars[Math.floor(Math.random() * chars.length)];
     	}
     	return str;
 	}
@@ -26,10 +26,10 @@ $(function() {
 
             // ADDING EVENTS
             $columnDelete.click(function() {
-            self.removeColumn();
+            	self.removeColumn();
             });
             $columnAddCard.click(function(event) {
-            self.addCard(new Card(prompt("Enter the name of the card")));
+            	self.addCard(new Card(prompt("Enter the name of the card")));
             });
 
             // CONSTRUCTION COLUMN ELEMENT
@@ -45,10 +45,10 @@ $(function() {
 
     Column.prototype = {
         addCard: function(card) {
-        this.$element.children('ul').append(card.$element);
+            this.$element.children('ul').append(card.$element);
         },
         removeColumn: function() {
-        this.$element.remove();
+            this.$element.remove();
         }
     };
 
@@ -59,7 +59,7 @@ $(function() {
         this.description = description;
         this.$element = createCard();
 
-            function createCard() {
+        function createCard() {
 
             // CREATING THE BLOCKS
             var $card = $('<li>').addClass('card');
